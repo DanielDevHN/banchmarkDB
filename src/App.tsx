@@ -1,10 +1,12 @@
-import { useState } from "react";
+//import { useState } from "react";
 import firebaseLogo from "./assets/firebase.svg";
 import mongodbLogo from "./assets/mongodb.svg";
 import "./App.css";
+import { testFirestoreConnection } from "./infrastructure/firebase/firebaseService";
+//import { getPerformance } from "firebase/performance";
 
 function App() {
-  const [count, setCount] = useState(0);
+  //const [count, setCount] = useState(0);
 
   return (
     <>
@@ -31,12 +33,12 @@ function App() {
           <option value="mongodb">MongoDB</option>
         </select>
         <hr />
-        <button onClick={() => setCount(count + 1)} className="button">
+        <button onClick={testFirestoreConnection} className="button">
           Insertar Data
         </button>
       </div>
-      <p>Tiempo de ejecución: {count}ms</p>
-      <p>Tiempo transcurrido: {count}ms</p>
+      <p>Tiempo de ejecucion firebase {}ms</p>
+      <p>Tiempo de ejecucion mongoDB {}ms</p>
     </>
   );
 }
