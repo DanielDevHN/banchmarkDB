@@ -2,7 +2,6 @@
 import firebaseLogo from "./assets/firebase.svg";
 import mongodbLogo from "./assets/mongodb.svg";
 import "./App.css";
-import { testFirestoreConnection } from "./infrastructure/firebase/firebaseService";
 //import { getPerformance } from "firebase/performance";
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
           <option value="mongodb">MongoDB</option>
         </select>
         <hr />
-        <button onClick={testFirestoreConnection} className="button">
+        <button className="button">
           Insertar Data
         </button>
       </div>
